@@ -1,6 +1,6 @@
-import { PortfolioApp } from "./PortfolioApp";
+import { CVApp } from "./PortfolioApp";
 
-window.onload = (event) => { 
-    const app = new PortfolioApp();
+window.onload = (ev) => {
+    const app = new CVApp();
     app.load();
-}
+};
