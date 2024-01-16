@@ -1,11 +1,17 @@
 import { SymplApp } from "sympl";
-import { HomePage } from "./Views/HomePage";
-import { Button } from "./Components/Button";
+import { HomePage } from "./Views/Home";
+import { homePageSettings } from "./Settings/Views/Home";
 
-export class PortfolioApp extends SymplApp
+export class CVApp extends SymplApp
 {
-    load(){
-        this._defaultView = new HomePage(this, "HomePage", {type: 'div', id: 'home-page'})
+    load(): void {
+        this.createViews();
         super.load();
+    }
+
+    protected createViews(): void
+    {
+        const homePage = new HomePage(this, 'HomePage', homePageSettings);
+        this._defaultView = homePage;
     }
 }
